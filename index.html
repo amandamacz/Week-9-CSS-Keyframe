@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STICKERSBYAMACS</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+  <div class="container">
+    <div class="top">
+      <header>
+        <img src="images/yellowstar.jpg" class="star1" width="40" height="40">
+        <h1>STICKERSBYAMACS</h1> <img src="images/yellowstar.jpg" class="star2" width="40" height="40">
+      </header>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html/custom.html">Custom</a></li>
+        <li>
+          <a href="html/shop.html">Shop &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="html/windowdecals.html">Window Decals</a></li>
+            <li><a href="html/licenseplates.html">License Plates</a></li>
+            <li><a href="html/caketoppers.html">Cake Toppers</a></li>
+          </ul>
+        <li><a href="html/contact.html">Contact</a></li>
+    </nav>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/justin2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/genius2.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/taz2.png" style="width:100%">
+      </div>
+
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+<h2>
+  <a href="html/shop.html"><button class="button button1">View All</button></a>
+  Most Loved Stickers
+</h2>
+
+</button>
+
+    <aside>
+      <div class="left"><img src="images/accrop.jpg" class="active"></div>
+      <div class="middle"><img src="images/foxymamacrop.jpg" class="fox"></div>
+      <div class="right"><img src="images/eazycobracrop.jpg" class="cobra"></div>
+    </aside>
+
+    <main>
+      <div class="hero">
+        <img src="images/50gangfox.jpg">
+      </div>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="html/contact.html">CONTACT</a></li>
+        <li><a href="html/faq.html">FAQ</a></li>
+        <li><a href="html/about.html">ABOUT</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+</script>
+
+</html>
